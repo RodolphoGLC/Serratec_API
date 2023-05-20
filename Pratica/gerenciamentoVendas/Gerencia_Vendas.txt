@@ -1,0 +1,37 @@
+Sistema de gerenciamento de vendas:
+	Um pedido pode ter vários itens de pedido.
+	Muitos itens de pedido pertencem a um produto.
+	Vários produtos podem ter várias categorias.
+	Um pedido pode ter apenas um endereço de entrega.
+
+Classe Pedido
+	dataPedido: Date
+	valorTotal: Double
+	listaItens: List<ItemPedido>
+	enderecoEntrega: Endereco
+
+Classe Produto
+	nome: String
+	preco: Double
+	descricao: String
+	listaCategorias: List<Categoria>
+	listaItens: List<ItemPedido>
+
+Classe Categoria
+	nome: String
+	descricao: String
+	listaProdutos: List<Produto>
+
+Classe ItemPedido
+	quantidade: Integer
+	preco: Double
+	produto: Produto
+	pedido: Pedido
+
+Classe Endereco
+	rua: String
+	numero: Integer
+	complemento: String
+	cidade: String
+	estado: String
+	cep: String
